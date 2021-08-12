@@ -23,7 +23,7 @@ body {
     grid-template:repeat(1fr, 2) / 100%;
     background: white;
     box-shadow: -4px 1px 31px -2px rgba(0,0,0,0.68);
-    width: 350px;
+    width: 320px;
     border-radius: 20px 20px 20px 20px;
     margin: 20px;
 }
@@ -39,6 +39,25 @@ section {
 h1 {
     text-align: center;
     font-size: 2rem;
+}
+
+.qtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.qtn:hover {
+    color: hsl(14, 88%, 65%);
+}
+
+.qtn > img {
+    object-fit: contain;
+}
+
+hr {
+    background-color: hsl(240, 5%, 91%);
 }
 
 p {
