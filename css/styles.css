@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    max-width: 500px;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.card {
+    display: grid;
+    grid-template:repeat(1fr, 2) / 100%;
+    background: white;
+    box-shadow: -4px 1px 31px -2px rgba(0,0,0,0.68);
+    width: 350px;
+    border-radius: 20px 20px 20px 20px;
+    margin: 20px;
+}
+
+.split-left {
+    background: url(/images/illustration-woman-online-mobile.svg);
+}
+
+section {
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+p {
+    padding: 20px 0;
+    font-size: 13px;
+}
+
+span {
+    padding: 10px 0;
+    line-height: 1.5em;
+    display: none;
+}

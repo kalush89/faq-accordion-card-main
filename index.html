@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="./css/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | FAQ Accordion Card</title>
@@ -15,26 +15,33 @@
   </style>
 </head>
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+  <main class="card">
+    <section class="split-left">
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+    </section>
+    <section class="split-right">
+      <h1>FAQ</h1>
+      <p id="qtn1">How many team members can I invite?</p>
+      <span id="ans1">You can invite up to 2 additional users on the Free plan. There is no limit on 
+        team members for the Premium plan.</span>
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+      <p class="qtn2">What is the maximum file upload size?</p>
+      <span class="ans2">No more than 2GB. All files in your account must fit your allotted storage space.</span>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+      <p class="qtn3">How do I reset my password?</p>
+      <span class="ans3">Click “Forgot password” from the login page or “Change password” from your profile page.
+        A reset link will be emailed to you.</span>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+      <p class="qtn4">Can I cancel my subscription?</p>
+      <span class="ans4">Yes! Send us a message and we’ll process your request no questions asked.</span>
 
+      <p class="qtn5">Do you provide additional support?</p>
+      <span class="ans5">Chat and email support is available 24/7. Phone lines are open during normal business hours.</span>
+    </section>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Albert Kombol</a>.
   </div>
 </body>
 </html>
