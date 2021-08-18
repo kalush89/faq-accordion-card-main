@@ -8,57 +8,86 @@
 body {
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
-    max-width: 500px;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+}
+
+main {
+    max-width: 370px;
     margin: auto;
     min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
 }
+
 
 .card {
-    display: grid;
-    grid-template:1fr / 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     background: white;
     box-shadow: -4px 1px 31px -2px rgba(0,0,0,0.68);
-    width: 300px;
     border-radius: 20px 20px 20px 20px;
-    margin: 20px;
+    margin: 100px 20px 20px;
+    width: 80%;
 }
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .attribution a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+  }
 
 .split-left {
-   position: relative;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   height: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    height: 45px;
 }
 
-#desktop-img, #desktop-img-bg {
+.split-right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1;
+}
+
+#box-img, #desktop-img, #desktop-img-bg {
     display: none;
 }
 
 #mobile-img, #mobile-img-bg {
     position: absolute;
+    display: block;
     object-fit: contain;
     object-position: center;
    
 }
 
 #mobile-img {
-    margin-top: -160px;
+    margin-top: -135px;
     margin-left: 6px;
     height: 220px;
     width: 220px;
+    z-index: 2;
 }
 
 #mobile-img-bg {
-    margin-top: -100px;
+    margin-top: -80px;
     margin-left: 26px;
     height: 200px;
     width: 200px;
+    z-index: 1;
 }
 
 section {
@@ -67,8 +96,8 @@ section {
 
 h1 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.7rem;
+    padding: 30px;
 }
 
 .qtn {
@@ -88,7 +117,7 @@ h1 {
 
 hr {
     background-color: hsl(240, 5%, 91%);
-    margin: 10px 0;
+    margin: 8px 0;
 }
 
 .bold {
@@ -97,10 +126,83 @@ hr {
 }
 
 p {
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 span {
     line-height: 1.5em;
     font-size: 11px;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        max-width: 900px;
+        max-height: 700px;
+       
+    }
+
+    h1 {
+        text-align: left;
+        padding: 30px 0;
+    }
+
+    .card {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 20px;
+        overflow: hidden;
+    }
+
+    .split-left {
+      width: 50%;
+    }
+
+    .split-left > img {
+            height: auto;
+            width: 100%;
+            margin: 50px;    
+    }
+
+    .split-right {
+        margin-bottom: 55px;
+        margin-right: 90px;
+        margin-left: 30px;
+    }
+
+    #mobile-img, #mobile-img-bg {
+        display: none;
+    }
+
+    #box-img, #desktop-img, #desktop-img-bg {
+        position: absolute;
+        display: block;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    #box-img {
+        margin-top: 130px;
+        margin-left: -80px;
+        height: 120px;
+        width: 120px;
+        z-index: 3;
+        position: fixed;
+    }
+
+    #desktop-img {
+        margin-top: -20px;
+        margin-left: -80px;
+        height: 350px;
+        width: 350px;
+        z-index: 2;
+    }
+    
+    #desktop-img-bg {
+        margin-top: -210px;
+        margin-left: -380px;
+        height: 650px;
+        width: 650px;
+        z-index: 1;
+    }
+
 }
