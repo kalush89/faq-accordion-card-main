@@ -1,60 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
   <main class="card">
     <section class="split-left">
-
+      <div id="image">
+        <img src="./images/illustration-woman-online-desktop.svg" alt="" id="desktop-img">
+        <img src="./images/bg-pattern-desktop.svg" alt="" id="desktop-img-bg">
+        <img src="./images/illustration-woman-online-mobile.svg" alt="" id="mobile-img">
+        <img src="./images/bg-pattern-mobile.svg" alt="" id="mobile-img-bg">
+      </div>
     </section>
     <section class="split-right">
       <h1>FAQ</h1>
-      <div class="qtn"><p id="qtn1">How many team members can I invite?</p><img src="./images/icon-arrow-down.svg" alt=""></div>
-      <span id="ans1">You can invite up to 2 additional users on the Free plan. There is no limit on 
-        team members for the Premium plan.</span>
+      <div class="qtn">
+        <p id="qtn1">How many team members can I invite?</p><img src="./images/icon-arrow-down.svg" alt="">
+      </div>
+      <span id="ans1"></span>
 
       <hr>
 
-      <div class="qtn"><p class="qtn2">What is the maximum file upload size?</p><img src="./images/icon-arrow-down.svg" alt=""></div>
-      <span class="ans2">No more than 2GB. All files in your account must fit your allotted storage space.</span>
+      <div class="qtn">
+        <p id="qtn2">What is the maximum file upload size?</p><img src="./images/icon-arrow-down.svg" alt="">
+      </div>
+      <span id="ans2"></span>
 
       <hr>
 
-      <div class="qtn"><p class="qtn3">How do I reset my password?</p><img src="./images/icon-arrow-down.svg" alt=""></div>
-      <span class="ans3">Click “Forgot password” from the login page or “Change password” from your profile page.
-        A reset link will be emailed to you.</span>
+      <div class="qtn">
+        <p id="qtn3">How do I reset my password?</p><img src="./images/icon-arrow-down.svg" alt="">
+      </div>
+      <span id="ans3"></span>
 
       <hr>
 
-      <div class="qtn"><p class="qtn4">Can I cancel my subscription?</p><img src="./images/icon-arrow-down.svg" alt=""></div>
-      <span class="ans4">Yes! Send us a message and we’ll process your request no questions asked.</span>
+      <div class="qtn">
+        <p id="qtn4">Can I cancel my subscription?</p><img src="./images/icon-arrow-down.svg" alt="">
+      </div>
+      <span id="ans4"></span>
 
       <hr>
 
-      <div class="qtn"><p class="qtn5">Do you provide additional support?</p><img src="./images/icon-arrow-down.svg" alt=""></div>
-      <span class="ans5">Chat and email support is available 24/7. Phone lines are open during normal business hours.</span>
+      <div class="qtn">
+        <p id="qtn5">Do you provide additional support?</p><img src="./images/icon-arrow-down.svg" alt="">
+      </div>
+      <span id="ans5"></span>
 
       <hr>
     </section>
   </main>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Albert Kombol</a>.
   </div>
+  <script src="./js/engine.js"></script>
   <script>
 
+    let firstAns = 'You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.';
+    let secondAns = 'No more than 2GB. All files in your account must fit your allotted storage space.';
+    let thirdAns = 'Click “Forgot password” from the login page or “Change password” from your profile page.A reset link will be emailed to you.';
+    let fourthAns = 'Yes! Send us a message and we’ll process your request no questions asked.';
+    let fifthAns = 'Chat and email support is available 24/7. Phone lines are open during normal business hours.';
+
+    document.querySelectorAll('.qtn').forEach(function (item) {
+      item.addEventListener('click', event => {
+        let el = event.currentTarget.firstElementChild;
+        let elTwo = event.currentTarget.lastElementChild;
+        let theId = event.currentTarget.firstElementChild.getAttribute('id');
+        switch (theId) {
+          case 'qtn1':
+            toggleAns('ans1', firstAns);
+            toggle(el, 'class', 'bold');
+            flipIcon(elTwo);
+            break;
+          case 'qtn2':
+            toggleAns('ans2', secondAns);
+            toggle(el, 'class', 'bold');
+            flipIcon(elTwo);
+            break;
+          case 'qtn3':
+            toggleAns('ans3', thirdAns);
+            toggle(el, 'class', 'bold');
+            flipIcon(elTwo);
+            break;
+          case 'qtn4':
+            toggleAns('ans4', fourthAns);
+            toggle(el, 'class', 'bold');
+            flipIcon(elTwo);
+            break;
+          case 'qtn5':
+            toggleAns('ans5', fifthAns);
+            toggle(el, 'class', 'bold');
+            flipIcon(elTwo);
+            break;
+
+        }
+      });
+    });
   </script>
 </body>
+
 </html>

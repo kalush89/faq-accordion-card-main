@@ -20,25 +20,55 @@ body {
 
 .card {
     display: grid;
-    grid-template:repeat(1fr, 2) / 100%;
+    grid-template:1fr / 100%;
     background: white;
     box-shadow: -4px 1px 31px -2px rgba(0,0,0,0.68);
-    width: 320px;
+    width: 300px;
     border-radius: 20px 20px 20px 20px;
     margin: 20px;
 }
 
 .split-left {
-    background: url(/images/illustration-woman-online-mobile.svg);
+   position: relative;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   height: 45px;
+}
+
+#desktop-img, #desktop-img-bg {
+    display: none;
+}
+
+#mobile-img, #mobile-img-bg {
+    position: absolute;
+    object-fit: contain;
+    object-position: center;
+   
+}
+
+#mobile-img {
+    margin-top: -160px;
+    margin-left: 6px;
+    height: 220px;
+    width: 220px;
+}
+
+#mobile-img-bg {
+    margin-top: -100px;
+    margin-left: 26px;
+    height: 200px;
+    width: 200px;
 }
 
 section {
-    margin: 30px;
+    margin: 20px;
 }
 
 h1 {
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .qtn {
@@ -58,15 +88,19 @@ h1 {
 
 hr {
     background-color: hsl(240, 5%, 91%);
+    margin: 10px 0;
+}
+
+.bold {
+    font-weight: 700;
+    color: black;
 }
 
 p {
-    padding: 20px 0;
-    font-size: 13px;
+    padding: 10px 0;
 }
 
 span {
-    padding: 10px 0;
     line-height: 1.5em;
-    display: none;
+    font-size: 11px;
 }
