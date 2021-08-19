@@ -113,12 +113,17 @@ h1 {
 }
 
 .qtn > img {
-    object-fit: contain;
+    object-fit:scale-down;
+    object-position: 100% 50%;
+    
 }
 
 hr {
-    background-color: hsl(240, 5%, 91%);
-    margin: 8px 0;
+    height:1px;
+    border-width:0;
+    color:gray;
+    background-color:gray;
+    margin: 10px 0;
 }
 
 .bold {
@@ -126,7 +131,7 @@ hr {
     color: black;
 }
 
-p {
+.qtn > p {
     padding: 8px 0;
 }
 
