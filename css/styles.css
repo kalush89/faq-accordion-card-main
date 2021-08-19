@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    max-width: 450px;
+    max-width: 400px;
     margin: auto;
     min-height: 100vh;
     display: flex;
@@ -76,15 +76,16 @@ main {
 
 #mobile-img {
     margin-top: -135px;
-    margin-left: 40px;
+    margin-left: 8%;
     height: 220px;
     width: 220px;
     z-index: 2;
 }
 
 #mobile-img-bg {
+    
     margin-top: -80px;
-    margin-left: 60px;
+    margin-left: 15%;
     height: 200px;
     width: 200px;
     z-index: 1;
