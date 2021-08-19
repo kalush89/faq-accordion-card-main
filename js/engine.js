@@ -52,8 +52,10 @@ function toggleAns(ansId, text) {
 function flipIcon(el){
   if(el.style.transform === 'rotate(0deg)' || !checkAttr(el, 'style')) {
     el.style.transform = 'rotate(180deg)';
+    el.style.objectPosition = '100% 50%';
   } else {
     el.style.transform = 'rotate(0deg)';
+    //el.style.objectPosition = '100% 50%';
   }
 }
 
