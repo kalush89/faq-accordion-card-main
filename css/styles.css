@@ -128,8 +128,8 @@ h1 {
 hr {
     height:1px;
     border-width:0;
-    color:gray;
-    background-color:gray;
+    color:rgb(201, 196, 196);
+    background-color:rgb(201, 196, 196);
     margin: 10px 0;
 }
 
